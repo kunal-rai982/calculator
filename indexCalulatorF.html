@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .maindiv {
+            height: 500px;
+            width: 300px;
+            background-color: burlywood;
+            margin-left: 400px;
+            box-shadow: 50px 30px 50px rgb(89, 64, 32);
+            border-radius: 15px;
+
+        }
+
+        .firstinp {
+            height: 38px;
+            width: 250px;
+            margin-top: 10px;
+            margin-left: 20px;
+            font-size: 22px;
+            border-radius: 5px;
+            border: 1px;
+            box-shadow: 2px 1px 1px rgb(121, 112, 112);
+
+        }
+        .th {
+            height: 40px;
+            width: 40px;
+            font-size: 25px;
+            border-radius: 5px;
+            border: 1px;
+            margin: 5px;
+            box-shadow: 4px 2px 2px rgb(200, 70, 70);
+
+        }
+        .th1{
+            background-color: dodgerblue;
+            height: 40px;
+            width: 40px;
+            font-size: 25px;
+            color: white;
+            border: 0px;
+            border-radius: 5px;
+            margin: 5px;
+            box-shadow: 4px 2px 2px rgb(200, 70, 70);
+
+        }
+        .th2{
+            height: 40px;
+            width: 40px;
+            font-size: 25px;
+            border-radius: 5px;
+            border: 1px;
+            margin: 5px;
+            box-shadow: 4px 2px 2px rgb(200, 70, 70);
+            background-color: rgb(15, 176, 123);
+            color: white;
+        }
+    </style>
+    <script>
+        function calci() {
+            var n1 = document.getElementById('n1').value;
+            document.getElementById('n1').value = eval(n1);
+        }
+        function sqr(){
+            var n1 = document.getElementById('n1').value;
+            n1 = parseInt(n1)
+            document.getElementById('n1').value= n1 ** 2;
+        }
+        function cube(){
+            var n1 = document.getElementById('n1').value;
+            n1 = parseInt(n1)
+            document.getElementById('n1').value= n1 ** 3;
+
+        }
+        function ac(){
+            document.getElementById('n1').value="";
+        }
+        function cl(){
+            var t=document.getElementById('n1').value;
+            t=t.substring(0,t.length-1);
+            document.getElementById('n1').value=t;
+        }
+        
+        
+        </script>
+</head>
+
+<body>
+    <div class="maindiv">
+        <center>
+            <h2 class="heading">Calculator</h2>
+        </center>
+        <input class="firstinp" type="text" name="" id="n1" placeholder="Please Enter Expression" /><br><br><br><br>
+        
+        <center>
+            <button class="th2" onclick="ac()">AC</button>
+            <button class="th" onclick="cl()">C</button>
+            <button class="th" onclick="sqr()">x<sup>2</sup></button>
+            <button class="th" onclick="document.getElementById('n1').value+='/'">÷</button><br><br>
+            <button class="th" value="9" onclick="document.getElementById('n1').value+=7">7</button>
+            <button class="th" value="8" onclick="document.getElementById('n1').value+=8">8</button>
+            <button class="th" value="7" onclick="document.getElementById('n1').value+=9">9</button>
+            <button class="th" onclick="document.getElementById('n1').value+='*'">×</button><br><br>
+            <button class="th" value="6" onclick="document.getElementById('n1').value+=4">4</button>
+            <button class="th" value="5" onclick="document.getElementById('n1').value+=5">5</button>
+            <button class="th" value="4" onclick="document.getElementById('n1').value+=6">6</button>
+            <button class="th" onclick="document.getElementById('n1').value+='+'">+</button><br><br>
+            <button class="th" value="3" onclick="document.getElementById('n1').value+=1">1</button>
+            <button class="th" value="2" onclick="document.getElementById('n1').value+=2">2</button>
+            <button class="th" value="1" onclick="document.getElementById('n1').value+=3">3</button>
+            <button class="th" onclick="document.getElementById('n1').value+='-'">-</button><br><br>
+            <button class="th" onclick="document.getElementById('n1').value+='.'">.</button>
+            <button class="th" onclick="document.getElementById('n1').value+=0">0</button>
+            <button class="th" onclick="document.getElementById('n1').value+='00'">00</button>
+            <button class="th1" onclick="calci()">=</button><br><br>
+            <!-- <button class="th" onclick="cube()">x<sup>3</sup></button> -->
+        </center>
+
+    </div>
+
+</body>
+
+</html>
